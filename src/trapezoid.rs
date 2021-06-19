@@ -14,10 +14,12 @@ use crate::limit::IntgrLimit;
 pub fn trapezoid<F>(f: F, l: IntgrLimit, n: i32) -> f32 where
 F: Fn(f32) -> f32 {
     let h: f32 = (l.b - l.a) / n as f32;
+
     let mut s: f32 = 0.0;
     for i in 1..n {
         let x = l.a+(h * i as f32);
         s += f(x);
     }
+
     return (h / 2.0)*(f(l.a) + (2.0*s) + f(l.b));
 }
