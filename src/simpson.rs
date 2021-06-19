@@ -31,8 +31,10 @@ F: Fn(f32) -> f32 {
         }
     }
 
+    println!("");
+
     let mut s2: f32 = 0.0; // for i = 3, 6, 9, ...
-    for i in (3..n-2).step_by(2) {
+    for i in (3..n-2).step_by(3) {
         let x = l.a+(h * i as f32);
         s2 += f(x);
     }
