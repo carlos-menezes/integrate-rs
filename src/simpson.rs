@@ -7,13 +7,13 @@ F: Fn(f32) -> f32 {
     let mut s1: f32 = 0.0; // for odd `i`
     for i in (1..n).step_by(2) {
         let x = l.a+(h * i as f32);
-        s1 += f(x); // odd x
+        s1 += f(x);
     }
 
     let mut s2: f32 = 0.0; // for even `i`
     for i in (2..n-1).step_by(2) {
         let x = l.a+(h * i as f32);
-        s2 += f(x); // odd x
+        s2 += f(x);
     }
 
     return (h / 3.0)*(f(l.a) + 4.0*s1 + 2.0*s2 + f(l.b))
