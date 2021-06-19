@@ -1,5 +1,5 @@
 [package]
-name = "intergrate-rs"
+name = "integrate-rs"
 version = "0.1.0"
 authors = ["Carlos Menezes <carlos-menezes212@hotmail.com>"]
 edition = "2018"
